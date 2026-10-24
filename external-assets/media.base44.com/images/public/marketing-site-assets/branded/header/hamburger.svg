@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Hamburger">
+<g id="Union">
+<path d="M22 18H2V16H22V18Z" fill="var(--fill-0, #312F2F)"/>
+<path d="M22 8H2V6H22V8Z" fill="var(--fill-0, #312F2F)"/>
+</g>
+</g>
+</svg>

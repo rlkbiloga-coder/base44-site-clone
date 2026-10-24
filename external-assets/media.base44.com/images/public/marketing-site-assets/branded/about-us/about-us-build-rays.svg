@@ -1,0 +1,25 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="VECTOR_Rays" opacity="0.2" clip-path="url(#clip0_0_8)">
+<path id="16_Vector" d="M51 51V-28" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="15_Vector" d="M51 51L-5 -5" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="14_Vector" d="M51 51H-28" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="13_Vector" d="M51 51L-5 107" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="12_Vector" d="M51 51V130" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="11_Vector" d="M51 51L107 107" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="10_Vector" d="M51 51H130" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="9_Vector" d="M51 51L107 -5" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="8_Vector" d="M51 51L69 11" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="7_Vector" d="M52 51L37 10" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="6_Vector" d="M51 51L11 33" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="5_Vector" d="M51 51L10 66" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="4_Vector" d="M51 51L33 91" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="3_Vector" d="M51 51L66 92" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="2_Vector" d="M51 51L91 69" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+<path id="1_Vector" d="M51 52L92 37" stroke="white" stroke-width="0.5" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_0_8">
+<rect width="103" height="103" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,1 @@
+import{j as r}from"./vendor-react-DkljngLw.js";import{M as s,r as t}from"./index-5yRcKltX.js";function i({markdown:o}){return r.jsx("div",{className:"blogb-sub blogb-category-intro",children:r.jsx(s,{remarkPlugins:[t],skipHtml:!0,children:o})})}export{i as B};

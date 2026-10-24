@@ -1,0 +1,1 @@
+function n(e){if(!e)return null;const t=new Date(e);return Number.isNaN(t.getTime())?null:new Intl.DateTimeFormat("en",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}).format(t)}export{n as f};

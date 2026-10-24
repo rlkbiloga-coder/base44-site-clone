@@ -1,0 +1,1 @@
+import{j as r}from"./vendor-react-DkljngLw.js";function i(s){return s.includes("$")?s.split("$").map((n,t)=>t===0?n:r.jsxs("span",{children:[r.jsx("span",{style:{fontFamily:"Geist, sans-serif",fontWeight:600},children:"$"}),n]},t)):s}export{i as r};

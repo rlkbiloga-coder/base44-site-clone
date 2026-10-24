@@ -1,0 +1,1 @@
+import{r as s}from"./vendor-react-DkljngLw.js";function r(){const[a,n]=s.useState(!1);return s.useLayoutEffect(()=>{const e=window.matchMedia("(max-width: 767px)"),t=()=>n(e.matches);return t(),e.addEventListener("change",t),()=>e.removeEventListener("change",t)},[]),a}export{r as u};

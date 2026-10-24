@@ -1,0 +1,36 @@
+name: Re-clone do site
+on:
+  workflow_dispatch:
+    inputs:
+      depth:
+        description: Profundidade do crawl
+        default: "2"
+jobs:
+  clone:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rodar crawler
+        run: python scripts/clone_site.py "https://base44.com/pt" --depth ${{ github.event.inputs.depth }} --out /tmp/clone
+      - name: Atualizar site/
+        run: |
+          rm -rf site external-assets _report
+          mkdir -p site external-assets _report
+          cp -r /tmp/clone/base44.com/. site/
+          for d in /tmp/clone/*/; do h=$(basename "$d"); if [ "$h" != "base44.com" ] && [ "$h" != "_report" ]; then cp -r "$d" "external-assets/$h"; fi; done
+          cp /tmp/clone/_report/* _report/ 2>/dev/null || true
+          cat > site/index.html <<'EOF'
+          <!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/pt/index.html"><title>base44.com clone</title></head><body><a href="/pt/index.html">Entrar no clone</a></body></html>
+          EOF
+      - name: Commit e push
+        run: |
+          git config user.name "clone-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "reclone: atualizacao automatica $(date +%F)" || exit 0
+          git push

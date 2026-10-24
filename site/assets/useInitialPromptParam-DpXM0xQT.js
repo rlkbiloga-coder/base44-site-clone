@@ -1,0 +1,1 @@
+import{r as i}from"./vendor-react-DkljngLw.js";function f(r){const t=i.useRef(!1);i.useEffect(()=>{if(t.current||typeof window>"u")return;const e=new URLSearchParams(window.location.search).get("prompt"),n=e==null?void 0:e.trim();n&&(t.current=!0,r(n))},[r])}export{f as u};

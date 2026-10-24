@@ -1,0 +1,1 @@
+import{r as e,k as r,j as t,H as o}from"./vendor-react-DkljngLw.js";import{j as a,k as s,p as d}from"./startup-BxiSko3P.js";a(document.head);s(document.body);d(document,navigator.userAgent);e.startTransition(()=>{r.hydrateRoot(document,t.jsx(e.StrictMode,{children:t.jsx(o,{})}))});

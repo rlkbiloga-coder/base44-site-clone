@@ -1,0 +1,1 @@
+import{j as i}from"./vendor-react-DkljngLw.js";/* empty css                      */function c(r,e){const n=e?r.indexOf(e.text):-1;return!e||n===-1?r:i.jsxs(i.Fragment,{children:[r.slice(0,n),i.jsx("a",{href:e.href,className:"br-inline-link",children:e.text}),r.slice(n+e.text.length)]})}export{c as w};
