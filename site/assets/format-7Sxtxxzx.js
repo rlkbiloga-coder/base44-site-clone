@@ -1,1 +1,0 @@
-function E(t,e,{dropBareOther:r=!1}={}){const i=typeof e=="string"?e.trim().slice(0,30):"";return(Array.isArray(t)?t:[]).map(n=>n==="Other"&&i?i:n).filter(n=>!(r&&n==="Other"))}function l(t,e=4){const r=t.slice(0,e);return{visible:r,remaining:Math.max(0,t.length-r.length)}}export{E as r,l as s};
