@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Rodar crawler
-        run: python scripts/clone_site.py "https://base44.com/pt" --depth ${{ github.event.inputs.depth }} --out /tmp/clone
+        run: python3 scripts/clone_site.py "https://base44.com/pt" --depth ${{ github.event.inputs.depth }} --out /tmp/clone
       - name: Atualizar site/
         run: |
           rm -rf site external-assets _report
@@ -27,6 +27,12 @@ jobs:
           cat > site/index.html <<'EOF'
           <!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/pt/index.html"><title>base44.com clone</title></head><body><a href="/pt/index.html">Entrar no clone</a></body></html>
           EOF
+            - name: Post-process para Pages
+        run: |
+          python3 scripts/postprocess.py /base44-site-clone ./site
+          cat > site/index.html <<'HTMLEOF'
+          <!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/base44-site-clone/pt/index.html"><title>base44.com clone</title></head><body><a href="/base44-site-clone/pt/index.html">Entrar no clone</a></body></html>
+          HTMLEOF
       - name: Commit e push
         run: |
           git config user.name "clone-bot"
