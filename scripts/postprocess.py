@@ -22,7 +22,7 @@ def rewrite_html(path):
     for a in ATTRS:
         # so caminhos absolutos do proprio site; URLs http/data ficam intactas
         html = re.sub(
-            rf'({a}\s*=\s*)(["\'])/(?!/)',
+            rf'({a}\s*=\s*)(["\'])/(?!/|base44-site-clone)',
             rf"\1\2{PREFIX}/",
             html,
         )
@@ -64,14 +64,13 @@ def to_index_pages(d):
 
 
 def main():
-    pages = 0
+    pages = to_index_pages(SITE)
     n_rew = 0
     for root, _, files in os.walk(SITE):
         for name in files:
             if name.endswith((".html", ".htm")):
                 if rewrite_html(os.path.join(root, name)):
                     n_rew += 1
-    pages = to_index_pages(SITE)
     # 404 fallback: redireciona pro caminho com prefixo do repo
     with open(os.path.join(SITE, "404.html"), "w") as f:
         f.write(
